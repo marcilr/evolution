@@ -61,6 +61,8 @@ $ type evolution
 evolution is /usr/bin/evolution
 $
 
+This installed evolution v3.22.6 with ExtendedMAPI.
+
 Looks good!
 
 2. Configure evolution to use exchange server:
