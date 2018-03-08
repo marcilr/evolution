@@ -1,0 +1,17 @@
+mail-filtering.txt
+Created Thu Mar  8 10:55:41 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Mail filtering
+
+
+In evolution 3.22.6 mail filtering is under:
+  Edit > Message Filters
+
+
+
+Links
+=====
+Evolution: Managing Spam/Creating New Filter Rules
+https://software.grok.lsu.edu/article.aspx?articleid=4468
