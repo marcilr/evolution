@@ -14,6 +14,9 @@ https://wiki.gnome.org/Apps/Evolution
 Evolution: Managing Spam/Creating New Filter Rules
 https://software.grok.lsu.edu/article.aspx?articleid=4468
 
+Getting Really Organized with Virtual Folders
+http://web.mit.edu/ghudson/dev/evo/ev/share/gnome/help/evolution/no/usage-mail-organize-vfolders.html
+
 How does one make Evolution work with Exchange 2010?
 # aptitude install evolution-ews
 This installs evolution using ExtendedMAPI that Outlook uses.
