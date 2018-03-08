@@ -10,3 +10,12 @@ Links
 =====
 Evolution
 https://wiki.gnome.org/Apps/Evolution
+
+Evolution: Managing Spam/Creating New Filter Rules
+https://software.grok.lsu.edu/article.aspx?articleid=4468
+
+How does one make Evolution work with Exchange 2010?
+# aptitude install evolution-ews
+This installs evolution using ExtendedMAPI that Outlook uses.
+Yeh hah!
+https://superuser.com/questions/98465/how-does-one-make-evolution-work-with-exchange-2010
