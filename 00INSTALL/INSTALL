@@ -1,146 +1,112 @@
 INSTALL
-Created Tue Aug 15 14:43:23 AKDT 2017
-Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+Created Thu Mar  8 10:22:08 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-Installation of Evolution in Debian jessie 8.9 amd64
+Installation of Evolution mail client
+on Debian stretch 9.3 amd64 (covellite)
 
-Packages
-========
-evolution-mapi - Exchange support for the Evolution groupware suite
 
-1. Install via evolution-mapi and evolution-mapi-dbg packages:
-covellite:~# aptitude install evolution-mapi evolution-mapi-dbg
+Evolution is a personal information management application
+that provides integrated mail, calendaring and address book
+functionality.
+--https://wiki.gnome.org/Apps/Evolution
+
+
+Installation
+============
+1. To install evolution install the evolution-ews package
+   (installed on covellite March 8, 2018):[1]
+
+evolution-ews - Exchange Web Services integration for Evolution
+
+# aptitude install evolution-ews
 The following NEW packages will be installed:
-  evolution{a} evolution-common{a} evolution-data-server{a} 
-  evolution-data-server-common{a} evolution-mapi evolution-mapi-dbg 
-  evolution-plugins{a} libebackend-1.2-7{a} libebook-1.2-14{a} 
-  libebook-contacts-1.2-0{a} libecal-1.2-16{a} libedata-book-1.2-20{a} 
-  libedata-cal-1.2-23{a} libedataserver-1.2-18{a} libevolution{a} 
-  libexchangemapi-1.0-0{a} 
-0 packages upgraded, 16 newly installed, 0 to remove and 1 not upgraded.
-Need to get 4,117 kB/13.8 MB of archives. After unpacking 73.9 MB will be used.
+  evolution-ews libmspack0{a} 
+0 packages upgraded, 2 newly installed, 0 to remove and 3 not upgraded.
+Need to get 502 kB of archives. After unpacking 2,433 kB will be used.
 Do you want to continue? [Y/n/?] Y
-Get: 1 http://ftp.us.debian.org/debian/ jessie/main evolution-data-server-common all 3.12.9~git20141128.5242b0-2+deb8u3 [1,136 kB]
-Get: 2 http://ftp.us.debian.org/debian/ jessie/main libedataserver-1.2-18 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [312 kB]
-Get: 3 http://ftp.us.debian.org/debian/ jessie/main libecal-1.2-16 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [216 kB]
-Get: 4 http://ftp.us.debian.org/debian/ jessie/main libebackend-1.2-7 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [239 kB]
-Get: 5 http://ftp.us.debian.org/debian/ jessie/main libebook-contacts-1.2-0 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [170 kB]
-Get: 6 http://ftp.us.debian.org/debian/ jessie/main libedata-book-1.2-20 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [236 kB]
-Get: 7 http://ftp.us.debian.org/debian/ jessie/main libebook-1.2-14 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [174 kB]
-Get: 8 http://ftp.us.debian.org/debian/ jessie/main libedata-cal-1.2-23 amd64 3.12.9~git20141128.5242b0-2+deb8u3 [185 kB]
-Get: 9 http://ftp.us.debian.org/debian/ jessie/main evolution-data-server amd64 3.12.9~git20141128.5242b0-2+deb8u3 [563 kB]
-Get: 10 http://ftp.us.debian.org/debian/ jessie/main evolution-mapi-dbg amd64 3.12.7-2 [886 kB]
-Fetched 4,117 kB in 11s (372 kB/s)                                                          
-Preconfiguring packages ...
-Selecting previously unselected package evolution-data-server-common.
+Get: 1 http://ftp.us.debian.org/debian stable/main amd64 libmspack0 amd64 0.5-1+deb9u1 [45.6 kB]
+Get: 2 http://ftp.us.debian.org/debian stable/main amd64 evolution-ews amd64 3.22.6-1 [457 kB]
+Fetched 502 kB in 1s (416 kB/s)        
+Selecting previously unselected package libmspack0:amd64.
+(Reading database ... 355785 files and directories currently installed.)
+Preparing to unpack .../libmspack0_0.5-1+deb9u1_amd64.deb ...
+Unpacking libmspack0:amd64 (0.5-1+deb9u1) ...
+Selecting previously unselected package evolution-ews.
+Preparing to unpack .../evolution-ews_3.22.6-1_amd64.deb ...
+Unpacking evolution-ews (3.22.6-1) ...
+Setting up libmspack0:amd64 (0.5-1+deb9u1) ...
+Setting up evolution-ews (3.22.6-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+
+#
+
+$ dpkg -l | grep evolution
+ii  evolution                      3.22.6-1+deb9u1   amd64   \
+    groupware suite with mail client and organizer
+
+ii  evolution-common               3.22.6-1+deb9u1   all     \
+    architecture independent files for Evolution
+
+ii  evolution-data-server          3.22.7-1          amd64   \
+    evolution database backend server
+
+ii  evolution-data-server-common   3.22.7-1          all     \
+    architecture independent files for Evolution Data Server
+
+ii  evolution-ews                  3.22.6-1          amd64   \
+    Exchange Web Services integration for Evolution
+
+ii  evolution-plugins              3.22.6-1+deb9u1   amd64   \
+    standard plugins for Evolution
 ...
-Processing triggers for libglib2.0-0:amd64 (2.42.1-1+b1) ...
-Processing triggers for hicolor-icon-theme (0.13-1) ...
-Processing triggers for desktop-file-utils (0.22-1) ...
-Processing triggers for mime-support (3.58) ...
-Processing triggers for menu (2.1.47) ...
-Processing triggers for man-db (2.7.0.2-5) ...
-Setting up evolution-data-server-common (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libedataserver-1.2-18 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libecal-1.2-16 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libebackend-1.2-7 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libebook-contacts-1.2-0 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libedata-book-1.2-20 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libebook-1.2-14 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up libevolution (3.12.9~git20141130.241663-1+b1) ...
-Setting up evolution-common (3.12.9~git20141130.241663-1) ...
-Setting up libedata-cal-1.2-23 (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u3) ...
-Setting up evolution (3.12.9~git20141130.241663-1+b1) ...
-Setting up libexchangemapi-1.0-0 (3.12.7-2) ...
-Setting up evolution-mapi (3.12.7-2) ...
-Setting up evolution-plugins (3.12.9~git20141130.241663-1+b1) ...
-Setting up evolution-mapi-dbg (3.12.7-2) ...
-Processing triggers for libc-bin (2.19-18+deb8u10) ...
-Processing triggers for menu (2.1.47) ...
-                                         
-covellite:~# 
+$
 
-That was easy!
+$ type evolution
+evolution is /usr/bin/evolution
+$
 
-2. In xfce run via Application Menu:
-Application Menu > Office > Evolution
+Looks good!
 
-i. At Welcome:
-Welcome to Evolution.
+2. Configure evolution to use exchange server:
 
-The next few screens will allow Evolution to connect to your email
-accounts, and to import from other applications.
+i. Run evolution:
+$ evolution &
 
-click next
+At Mail Evolution, Mail authentication request popup:
 
-ii. At Restore from Backup
-You can restore from a backup file.
+Mail authentication request
+Please enter the password for mail account "***@gci.com"
+(host: mail.gci.com)
 
-This will restore all your personal data, settings mail filters, etc.
+User Name: ***
+Password:  ***
 
-<unchecked> Restore form a back file: <blank>
+x Add this password to your keyring
 
-click Next
+Enter password and click OK
 
-iii. At Identity
+ii. At Choose password for new keyring
 
-Please enter your name and email address below.  The "optional" fields
-below do not need to be filled in, unless you wish to include this
-information in email you send.
+An application want to create a new keyring called
+'Default keyring'.  Choose the password you want to
+use for it.   
 
-Required Information
-    Full Name: Raymond Marcil
-Email Address: rmarcil@gci.com
+Password: ***
 
-Option Information:
-     Reply-To: rmarcil@gci.com
- Organization: GCI Information Techology
+Entered password and evolution launched correctly
+with the mailbox on mail.gci.com
 
-click Next
-
-iv. At Receiving Email
-Server Type: IMAP+ ===> Exchange MAPI
-Description: For accessing Microsoft Exchange 2007/OpenChange servers
-             via MAPI
-
-Configuration
-  Server:    exchange.gci.com   <=== default presented
-             ===> ex-arr-prd01.gci.com <=== From outlook also fails
-Username:    rmarcil            <=== default presented
-Domain name: GCI                <=== Added
-
-          x Use secure connection
-<unchecked> Kerberos authentication
-
-...
-Cannot get authentication to work despite repeated attempts.
+Very nice!
 
 
-Mail server
-===========
-covellite:~$ 
-PING ex-arr-prd01.gci.com (10.103.156.130) 56(84) bytes of data.
-64 bytes from 10.103.156.130: icmp_seq=1 ttl=252 time=0.971 ms
-64 bytes from 10.103.156.130: icmp_seq=2 ttl=252 time=0.940 ms
-^C
---- ex-arr-prd01.gci.com ping statistics ---
-2 packets transmitted, 2 received, 0% packet loss, time 1001ms
-rtt min/avg/max/mdev = 0.940/0.955/0.971/0.034 ms
-marcilr@covellite:~/git/net/mail/evolution$ ping mail.gci.com
-PING mail.gci.com (10.103.156.130) 56(84) bytes of data.
-64 bytes from 10.103.156.130: icmp_seq=1 ttl=252 time=0.995 ms
-64 bytes from 10.103.156.130: icmp_seq=2 ttl=252 time=0.961 ms
-64 bytes from 10.103.156.130: icmp_seq=3 ttl=252 time=1.03 ms
-^C
---- mail.gci.com ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2003ms
-rtt min/avg/max/mdev = 0.961/0.998/1.039/0.041 ms
-covellite:~$
+Links
+=====
+[1] How does one make Evolution work with Exchange 2010?
+https://superuser.com/questions/98465/how-does-one-make-evolution-work-with-exchange-2010
 
-
-Looks like ex-arr-prd01.gci.com (10.103.156.130) and
-mail.gci.com (10.103.156.130) point to the same GCI
-mail server.
-
+Evolution is a personal information management application
+that provides integrated mail, calendaring and address book
+functionality.
+https://wiki.gnome.org/Apps/Evolution
