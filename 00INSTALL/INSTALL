@@ -7,12 +7,6 @@ Installation of Evolution mail client
 on Debian stretch 9.3 amd64 (covellite)
 
 
-Evolution is a personal information management application
-that provides integrated mail, calendaring and address book
-functionality.
---https://wiki.gnome.org/Apps/Evolution
-
-
 Installation
 ============
 1. To install evolution install the evolution-ews package
@@ -106,7 +100,3 @@ Links
 [1] How does one make Evolution work with Exchange 2010?
 https://superuser.com/questions/98465/how-does-one-make-evolution-work-with-exchange-2010
 
-Evolution is a personal information management application
-that provides integrated mail, calendaring and address book
-functionality.
-https://wiki.gnome.org/Apps/Evolution
