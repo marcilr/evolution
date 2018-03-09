@@ -9,8 +9,8 @@ on Debian stretch 9.3 amd64 (covellite)
 
 Installation
 ============
-1. To install evolution install the evolution-ews package
-   (installed on covellite March 8, 2018):[1]
+1. To install evolution install the evolution-ews (Exchange Web Services)
+   package (installed on covellite March 8, 2018):[1]
 
 evolution-ews - Exchange Web Services integration for Evolution
 
