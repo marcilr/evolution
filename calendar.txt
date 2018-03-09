@@ -1,0 +1,90 @@
+calendar.txt
+Created Thu Mar  8 15:30:26 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Calendar (evolution v3.22.6)
+
+
+Evolution started with a non-syncing empty calendar.
+
+
+Fri Mar  9 10:05:39 AKST 2018
+=============================
+Still working on calendar.
+
+1. Click Calendar view
+
+2. Toward upper left select down arrow next to New
+select Calendar
+
+3. At New Calendar select:
+Type:  On the Web
+Name:  GCI
+Color: <whatever>
+URL:   https://yourexchangeserveraddr/owa/?cmd=contents&module=calendar
+       --What is the URL to open the Outlook Web Client in the calendar page?
+       https://superuser.com/questions/646068/what-is-the-url-to-open-the-outlook-web-client-in-the-calendar-page
+user:  gci\rmarcil
+Refresh every: 5 minutes
+
+click OK
+
+Get error:
+  The calendar backend service "GCI" encounter an error.
+  The reported error was "Bad file format".
+
+Under Edit > Preferences > Mail Accounts
+  > my account > Edit > Receiving Options
+  Options
+  x Listen for server change notifications
+  x Synchronize remote mail locally in all folders
+
+Made no difference to calendar.
+
+
+Note the outlook webapp is:
+  https://owa.gci.com/owa/auth/logon.aspx?url=https://owa.gci.com/owa/&reason=0
+
+For https://owa.gci.com/owa/?cmd=contents&module=calendar after login get:
+  Access to Calendar folders from Outlook Web App isn't
+  supported by your current browser. To see a list of all
+  browsers that support the full Outlook Web App experience,
+  go to the link below:
+    http://go.microsoft.com/fwlink/?LinkID=129362
+    ===> https://products.office.com/en-US/office-system-requirements#Browsers-section
+         Safari, Chrome, and Firefox
+         Microsoft Edge
+         Internet Explorer
+
+Execute evolution with debugging to ~/evo.log:
+  CAMEL_DEBUG=all evolution >& evo.log
+
+  --Evolution EWS Calendar not Working to Exchange 2010
+    https://ask.fedoraproject.org/en/question/7802/evolution-ews-calendar-not-working-to-exchange-2010/
+
+
+Thu Mar  8 15:30:26 AKST 2018
+=============================
+To fix this (did not work):
+1. Set up evolution-ews and get your inbox functional.
+   Make sure you're online, and syncing.
+
+2. In Mail view:
+   right click your exchange account,
+   select Manage Subscriptions 
+
+3. For "Show items that contain" search for "Calendar"
+   Check Calendar search result:
+   x Calendar
+
+   click Close
+
+--askubuntu.com/
+
+
+
+Links
+=====
+How to open Exchange 2010 Shared Calendar?
+https://askubuntu.com/questions/202090/how-to-open-exchange-2010-shared-calendar
