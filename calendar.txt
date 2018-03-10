@@ -11,8 +11,37 @@ Evolution started with a non-syncing empty calendar.
 
 Fri Mar  9 10:05:39 AKST 2018
 =============================
-At 
+Configure evolution to use davmail gateway for imap:
 
+1. Install and configure /etc/davmail.properties for:
+davmail.url=https://mail.gci.com/EWS/Exchange.asmx
+
+2. In evolution 3.22.6:
+click Calendar tab
+
+3. Add new calendar via davmail gateway
+click down arrow to right of New towards upper left
+select Calendar
+
+4. At  New Calendar popup
+Type:  On the Web
+Name:  DavMail
+Color: <whatever>
+Url:   http://localhost:1080/users/mail@company.com/calendar
+       --Thunderbird calendar setup
+         DavMail Gateway
+         http://davmail.sourceforge.net/thunderbirdcalendarsetup.html
+
+x Mark as default calendar
+<blank> Use and existing iCalendar (ics) file
+
+click OK
+
+5. Configure DavMail
+right click DavMail > Properties
+
+
+----------------------------------------
 Login to:
   https://mail.gci.com/EWS/Exchange.asmx
 
