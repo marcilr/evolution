@@ -11,6 +11,14 @@ Evolution started with a non-syncing empty calendar.
 
 Fri Mar  9 10:05:39 AKST 2018
 =============================
+At 
+
+Login to:
+  https://mail.gci.com/EWS/Exchange.asmx
+
+Gets to:
+  https://mail.gci.com/ews/Services.wsdl
+
 Still working on calendar.
 
 1. Click Calendar view
