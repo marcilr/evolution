@@ -1,0 +1,49 @@
+unread-mail-folder.txt
+Created Thu Mar  8 15:41:41 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Unread mail folder
+
+
+To create an unread mail folder:
+
+1. In evolution 3.22.6:
+select Edit > Search Folders
+
+2. At Search Folders
+click Add
+
+3. At Add Rule
+
+Rule name:              00Unread
+Find items which match: all the following conditions
+Include threads:        None
+
+Added rule:
+  Status is not Read
+
+Search Folder Sources
+  x Automatically update on any source fold change
+
+  All active local folders
+  All active remote folders
+  All localt and active remote folders <===
+  Specific folders
+
+click OK
+
+This will create the 00Unread search folder under "Search Folders"
+
+
+
+Links
+=====
+Creating A Search Folder
+https://help.gnome.org/users/evolution/stable/mail-search-folders-add.html.en
+
+Getting Really Organized with Virtual Folders
+http://web.mit.edu/ghudson/dev/evo/ev/share/gnome/help/evolution/no/usage-mail-organize-vfolders.html
+
+Using Search folders
+https://help.gnome.org/users/evolution/stable/mail-search-folders.html.en
